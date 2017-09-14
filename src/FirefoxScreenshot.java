@@ -28,15 +28,15 @@ public class FirefoxScreenshot {
 		String baseUrl = "http://google.com";
 		System.setProperty("webdriver.gecko.driver","C:\\browser-drivers\\geckodriver\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
-		System.out.println("0.");
-		driver.manage().window().fullscreen(); //TIRA ERROR
-		System.out.println("1");
+		
+		//TIRA ERROR EN FIREFOX 55.0.3
+		//driver.manage().window().fullscreen();
 		driver.get(baseUrl);
-		System.out.println("2");
-		//1 NO ANDA EN FIREFOX
-		//Actions actions = new Actions(driver);
-		//actions.sendKeys(Keys.F11);
-		//actions.perform();
+		
+		//1 NO HACE NADA EN FIREFOX
+		Actions actions = new Actions(driver);
+		actions.sendKeys(Keys.F11);
+		actions.perform();
 		
 		//2
 		java.awt.Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
