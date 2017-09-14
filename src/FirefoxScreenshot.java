@@ -28,11 +28,12 @@ public class FirefoxScreenshot {
 		String baseUrl = "http://google.com";
 		System.setProperty("webdriver.gecko.driver","C:\\browser-drivers\\geckodriver\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
-		
-		//driver.manage().window().fullscreen(); //TIRA ERROR
+		System.out.println("0.");
+		driver.manage().window().fullscreen(); //TIRA ERROR
+		System.out.println("1");
 		driver.get(baseUrl);
-		
-		//1 NO ANDA
+		System.out.println("2");
+		//1 NO ANDA EN FIREFOX
 		//Actions actions = new Actions(driver);
 		//actions.sendKeys(Keys.F11);
 		//actions.perform();
@@ -43,7 +44,7 @@ public class FirefoxScreenshot {
 		
 		//3		
 		BufferedImage image = new Robot().createScreenCapture(rectangle);
-		ImageIO.write(image, "png", new File("D:\\screenshots\\firefox_screenshot_2.png"));
+		ImageIO.write(image, "png", new File("D:\\screenshots\\firefox_screenshot_3.png"));
 		
         //close Chrome
         driver.close();

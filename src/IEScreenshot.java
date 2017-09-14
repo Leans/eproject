@@ -20,7 +20,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
-public class IEScreenshot2 {
+public class IEScreenshot {
 	
 	public static void main(String[] args) {
 		try {
@@ -43,7 +43,7 @@ public class IEScreenshot2 {
 		
 		//3		
 		BufferedImage image = new Robot().createScreenCapture(rectangle);
-		ImageIO.write(image, "png", new File("D:\\screenshots\\ie_screenshot_3.png"));
+		ImageIO.write(image, "png", new File("D:\\screenshots\\ie_screenshot_4.png"));
 		
         //close IE
         driver.close(); //Tira Excepcion en IE driver
