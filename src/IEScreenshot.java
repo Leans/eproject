@@ -47,7 +47,7 @@ public class IEScreenshot {
 		
         //close IE
         driver.close(); //Tira Excepcion en IE driver
-        System.out.println("Operacion finalizada con exito!");
+        System.out.println("Operacion finalizada");
         
 		}
 		catch (Exception e) {
